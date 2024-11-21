@@ -1,7 +1,6 @@
 <?php
 
-use App\Http\Controllers\AutomateExecutionController;
-use App\Http\Controllers\JobController;
+use App\Http\Controllers\PushNotify;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', [ JobController::class, 'dispatchJob' ]);
+Route::get('/', [PushNotify::class, 'sendPushNotification']);
 
-Route::get('/', [AutomateExecutionController::class, 'dispatchJob' ]);
