@@ -1,6 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\AutomateExecutionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,10 +13,8 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
-use App\Http\Controllers\FcmController;
-use App\Http\Controllers\PushNotify;
 
-Route::put('update-device-token', [FcmController::class, 'updateDeviceToken']);
+// Route::put('update-device-token', [FcmController::class, 'updateDeviceToken']);
 
-Route::post('send', [PushNotify::class, 'sendPushNotification']);
+Route::post('send', [AutomateExecutionController::class, 'index']);
 // Route::post('send', [FcmController::class, 'sendFcmNotification']);
